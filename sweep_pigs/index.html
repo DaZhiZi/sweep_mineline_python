@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8" content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport'>
+    <title>Swine Peeper</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+
+<body>
+  <div id="loadingMessage">LOADING</div>
+  <div id="clickBlocker"></div>
+  <div id="jPlayer"></div>
+  <div id="jPlayer2"></div>
+  <div id="highScoreName" class="blueWindow"><strong class="enterName">ENTER YOUR  NAME</strong>
+    <div id="entryBoxes">
+      <a id="previous" class="left iconFont" href="#">
+        <br>f</a>
+      <a id="next" class="iconFont" href="#">
+        <br>g</a>
+      <div id="plusBox">
+        <a class="up plusBox iconFont plus0" href="#">k</a>
+        <a class="up plusBox iconFont plus1" href="#">k</a>
+        <a class="up plusBox iconFont plus2" href="#">k</a>
+        <a class="up plusBox iconFont plus3" href="#">k</a>
+        <a class="up plusBox iconFont plus4" href="#">k</a>
+        <a class="up plusBox iconFont plus5" href="#">k</a>
+        <a class="up plusBox iconFont plus6" href="#">k</a>
+        <a class="up plusBox iconFont plus7" href="#">k</a>
+      </div>
+      <div id="nameBox">
+        <a class="nameBox character0" href="#"></a>
+        <a class="nameBox character1" href="#"></a>
+        <a class="nameBox character2" href="#"></a>
+        <a class="nameBox character3" href="#"></a>
+        <a class="nameBox character4" href="#"></a>
+        <a class="nameBox character5" href="#"></a>
+        <a class="nameBox character6" href="#"></a>
+        <a class="nameBox character7" href="#"></a>
+      </div>
+      <div id="minusBox">
+        <a class="down minusBox iconFont minus0" href="#">j</a>
+        <a class="down minusBox iconFont minus1" href="#">j</a>
+        <a class="down minusBox iconFont minus2" href="#">j</a>
+        <a class="down minusBox iconFont minus3" href="#">j</a>
+        <a class="down minusBox iconFont minus4" href="#">j</a>
+        <a class="down minusBox iconFont minus5" href="#">j</a>
+        <a class="down minusBox iconFont minus6" href="#">j</a>
+        <a class="down minusBox iconFont minus7" href="#">j</a>
+      </div>
+    </div>
+    <a id="clearName" class="circleButton" href="#">CLEAR</a>
+    <a id="submitName" class="circleButton" href="#">SUBMIT</a>
+  </div>
+  <div id="customGameSetup" class="blueWindow">CUSTOM &nbsp;BOARD&nbsp; SETTINGS
+    <br>
+    <div class="counterPigBody custom">
+      <br>&#x00b0;(oo)&#x00b0;
+      <br>_
+    </div>
+    <div class="counterPigEar custom"></div>
+    <div class="counterPigSpacer custom"></div>
+    <div class="counterPigEar custom"></div>
+    <div class="gameSquare custom"></div>
+    <div id="customNumPigs"></div>
+    <div id="customGridSize"></div>
+    <div class="circleButton check iconFont">h</div>
+    <div class="circleButton x iconFont">i</div>
+    <div class="arrow plus pigNumber iconFont">g</div>
+    <div class="arrow minus left pigNumber iconFont">f</div>
+    <div class="arrow plus gridNumber iconFont">g</div>
+    <div class="arrow minus left gridNumber iconFont">f</div>
+  </div>
+  <div id="rotatedBG"></div>
+  <div id="startMenu">
+    <div id="gameLogo">DAZHIZI<span>PIGS</span></div>
+    <a class='startButton' id="easy" href="#">EASY</a>
+    <a class='startButton' id="medium" href="#">MEDIUM</a>
+    <a class='startButton' id="hard" href="#">HARD</a>
+    <a class='startButton' id="custom" href="#">CUSTOM</a>
+    <a class="circleButton instructionsButton" href="#">?</a>
+    <a class="circleButton iconFont" id="highScores" href="#">a</a>
+    <a class="circleButton soundButton" href="#">
+      <div class="speakerIcon iconFont">c</div>
+    </a>
+    <a class="circleButton musicButton" href="#">
+      <div class = "musicIcon iconFont">
+        b
+      </div>
+    </a>
+  </div>
+  <div class="endMessage">
+    <span id="highScoreMessage"><strong>HIGH SCORE!</strong></span>
+    <span><strong class="winOrLose"></strong></span>
+    <br><span id="pigQuote"></span>
+    <div class="boardExit gameOver"></div>
+  </div>
+  <div id="gameOver">
+  </div>
+  <div id="playArea">
+  </div>
+  <div id="playInfoControls">
+    <div id="flagCounter">
+      <div class="counterPigBody">
+        <br>&#x00b0;(oo)&#x00b0;
+        <br>_
+      </div>
+      <div class="counterPigEar"></div>
+      <div class="counterPigSpacer"></div>
+      <div class="counterPigEar"></div>
+      <div id="counterNumber">100</div>
+    </div>
+    <div id="timeCounter">0</div>
+    <a href="#" class="circleButton iconFont  lin-new-game" id="refresh">d</a>
+    <a href="#" class="circleButton iconFont lin-back" id="back">e</a>
+    <a href="#" class="circleButton gameScreen instructionsButton "><span class="lin-about">?</span></a>
+    <a class="circleButton soundButton gameScreen" href="#">
+      <div class="speakerIcon iconFont ">c</div>
+    </a>
+    <a class="circleButton musicButton gameScreen" href="#">
+      <div class = "musicIcon iconFont lin-play-bgm">
+        b
+      </div>
+    </a>
+  </div>
+  </div>
+  <div id="highScoreContainer">
+    <div class="easyContainer">
+      <span class="tab"><div class="easy" id="easyTab">EASY</div></span>
+      <div class="mediumDummyTab tab"></div>
+      <div class="hardDummyTab tab"></div>
+      <div id="easyBoard" class="easy board">
+        <table>
+          <tr class="place swineEasy 1">
+            davizi xxxx
+          </tr>
+          <tr class="place swineEasy 2">
+            davizi xxxx
+          </tr>
+          <tr class="place swineEasy 3">
+            davizi xxxx
+          </tr>
+          <tr class="place swineEasy 4">
+            davizi xxxx
+          </tr>
+          <tr class="place swineEasy 5">
+            davizi xxxx
+          </tr>
+          <tr class="place swineEasy 6">
+            davizi xxxx
+          </tr>
+          <tr class="place swineEasy 7">
+            davizi xxxx
+          </tr>
+          <tr class="place swineEasy 8">
+          </tr>
+          <tr class="place swineEasy 9">
+          </tr>
+          <tr class="place swineEasy 10">
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div class="mediumContainer">
+      <span class="tab"><div class="medium" id="mediumTab">MEDIUM</div></span>
+      <div class="easyDummyTab tab"></div>
+      <div class="hardDummyTab tab"></div>
+      <div id="mediumBoard" class="medium board">
+        <table>
+          <tr class="place swineMedium 1">
+          </tr>
+          <tr class="place swineMedium 2">
+          </tr>
+          <tr class="place swineMedium 3">
+          </tr>
+          <tr class="place swineMedium 4">
+          </tr>
+          <tr class="place swineMedium 5">
+          </tr>
+          <tr class="place swineMedium 6">
+          </tr>
+          <tr class="place swineMedium 7">
+          </tr>
+          <tr class="place swineMedium 8">
+          </tr>
+          <tr class="place swineMedium 9">
+          </tr>
+          <tr class="place swineMedium 10">
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div class="hardContainer">
+      <span class="tab"><div class="hard" id="hardTab">HARD</div></span>
+      <div class="easyDummyTab tab"></div>
+      <div class="mediumDummyTab tab"></div>
+      <div id="hardBoard" class="hard board">
+        <table>
+          <tr class="place swineHard 1">
+          </tr>
+          <tr class="place swineHard 2">
+          </tr>
+          <tr class="place swineHard 3">
+          </tr>
+          <tr class="place swineHard 4">
+          </tr>
+          <tr class="place swineHard 5">
+          </tr>
+          <tr class="place swineHard 6">
+          </tr>
+          <tr class="place swineHard 7">
+          </tr>
+          <tr class="place swineHard 8">
+          </tr>
+          <tr class="place swineHard 9">
+          </tr>
+          <tr class="place swineHard 10">
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div class='boardExit highScore'>
+    </div>
+  </div>
+
+  <div id="questionBoardContainer" class="lin-question-board-container">
+    <div class="instructionsContainer">
+      <span class="tab" data-id=".instructionsContainer"><div class="instructions" id="instructionsTab">INSTRUCTIONS</div></span>
+      <div class="aboutDummyTab tab "></div>
+      <div id="instructionsBoard" class="instructions board">
+        <h1>GOAL</h1>
+        <p>
+          Click on all the squares that don't contain a pig.
+        </p>
+        <h1>HOW TO PLAY</h1>
+        <p>
+          Click on a square to start. If the square contains a pig you lose. If it is adjacent to pigs a number will appear in the square telling you how many neighboring squares contain pigs. If it doesn't contain a pig and there are no nearby pigs the surrounding
+          squares will be clicked.
+          <br>
+          <br> To mark that a square contains a pig click it and hold down for a half-second, the square will turn pink and the pig counter will decrease.
+        </p>
+      </div>
+    </div>
+    <div class="aboutContainer">
+      <span class="tab" data-id=".aboutContainer"><div class="about" id="aboutTab">ABOUT</div></span>
+      <div class="instructionsDummyTab tab"></div>
+      <div id="aboutBoard" class="about board">
+        <br>
+        <h1>PROGRAMMING</h1>
+        <p>
+          Tip McMahon
+        </p>
+        <h1>ART & DESIGN</h1>
+        <p>
+          Tip McMahon
+        </p>
+        <h1>SOUND FX</h1>
+        <p>
+          Provided by Soundjay.com
+        </p>
+        <h1>MUSIC</h1>
+        <p>
+          "Panama Hat" by Jason Shaw at AudionautiX.com
+        </p>
+      </div>
+    </div>
+    <div class="boardExit questionBoard"></div>
+  </div>    
+<!--
+ let ms = {
+        click_btn: '../sound/buttonclick.mp3',
+        click_block: '../sound/clickblock.mp3',
+        click_is_land: '../sound/clickisland.mp3',
+        flag_block: '../sound/flagblock.mp3',
+        light_click: '../sound/buttonclick.mp3',
+        bgm: '../sound/panamahatsong.mp3',
+        pig: '../sound/pokepig.mp3',
+        sleep_pig: '../sound/sleepingpigs.mp3',
+    }
+-->
+  <div class="lin-music"></div>
+  <script src="js/utils.js"></script>
+  <script src="js/music.js"></script>
+  <script src="js/index.js"></script>
+</body>
+</html>
